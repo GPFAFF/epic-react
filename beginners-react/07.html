@@ -1,0 +1,34 @@
+<body>
+  <div id="root" />
+  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+
+  <script type="text/babel">
+    const root = document.getElementById('root');
+
+
+    const App = () => {
+      const [count, setCount] = React.useState(0)
+      const increment = () => {
+        console.log('Aoo');
+        setCount(count + 1)
+      }
+      // const [count, setCount] = React.useState(() => 0)
+      // const increment = () => {
+      //   console.log('app')
+      //   setCount(previousCount => previousCount + 1)
+      // }
+
+      return <button onClick={increment}>{count}</button>
+    }
+
+    ReactDOM.render(<App />, root);
+
+  </script>
+</body>
+
+const [count, setCount] = React.useState(() => 0)
+  const increment = () => setCount(previousCount => previousCount + 1)
+  return <button onClick={increment}>{count}</button>

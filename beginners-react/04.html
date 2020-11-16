@@ -1,0 +1,15 @@
+<body>
+  <div id="root" />
+  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+
+
+  <script type="text/babel">
+    const root = document.getElementById('root');
+    function Name({first, last}) {
+      return <div>{first.toUpperCase()} {last}</div>
+    }
+    ReactDOM.render(<Name first="greg" last="pfaff" />, root);
+  </script>
+</body>
